@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.log {
+  background-color: #111;
+  color: #fff;
+  padding: 1em;
+  white-space: pre;
+}
