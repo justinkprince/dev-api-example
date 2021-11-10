@@ -16,5 +16,7 @@
     "url": "https://github.com/justinkprince/dev-api-example/issues"
   },
   "homepage": "https://github.com/justinkprince/dev-api-example#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@justinkprince/dev-api": "^1.7.0"
+  }
 }
