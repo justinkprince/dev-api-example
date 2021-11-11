@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example</title>
-  <link href="./assets/css/main.css" rel="stylesheet" />
-  <script src="./assets/js/main.js" defer></script>
-</head>
-<body>
-  <h1>Example</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
 
-  <div class="container">
-    <form class="form" id="user-form">
-      <fieldset>
-        <label for="user-name">
-          <input id="user-name" type="text" name="user-name" required />
-        </label>
-        <button>Add user</button>
-      </fieldset>
-      </form>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/api.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <h1>Example</h1>
+    </header>
 
-      <div id="log" class="log"></div>
-  </div>
-</body>
+    <main class="container">
+      <div class="row">
+        <div class="column">
+          <form id="user-form" class="column">
+            <fieldset>
+              <label for="user-name">Name</label>
+              <input
+                id="user-name"
+                type="text"
+                name="user-name"
+                placeholder="Ex: John Doe"
+                required
+              />
+              <button>Add user</button>
+            </fieldset>
+          </form>
+
+          <div id="log" class="log"></div>
+          <button id="clear-log-btn">Clear</button>
+        </div>
+
+        <div
+          id="user-list-container"
+          class="user-list-container column column-67 no-users"
+        >
+          <h4 class="msg-no-users">There are no users to display</h4>
+
+          <table class="user-list-table">
+            <thead>
+              <th>ID</th>
+              <th>Name</th>
+              <th></th>
+            </thead>
+            <tbody id="user-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <template id="user-template">
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="delete-btn">Delete</button>
+        </td>
+      </tr>
+    </template>
+  </body>
 </html>

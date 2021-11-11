@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -10,5 +12,24 @@ html {
   background-color: #111;
   color: #fff;
   padding: 1em;
+  margin-bottom: 1em;
   white-space: pre;
+}
+
+.msg-no-users {
+  margin: 1em 0.5em;
+}
+
+.user-list-container.has-users .msg-no-users {
+  display: none;
+}
+
+.user-list-container .user-list-table {
+  display: none;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.user-list-container.has-users .user-list-table {
+  display: table;
 }
